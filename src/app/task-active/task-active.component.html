@@ -1,6 +1,7 @@
 <div  *ngIf="task.isActive" class='container'>
   <div class='row bg-light m-2 p-2 border border-secondary rounded'>
       <div class="col-md align-self-center">{{task.taskName}}</div>
-      <div class="col-sm-2"><button (click)='onComplete()' class="btn btn-success float-right">Complete</button></div>
+      <div class="col-sm-2"><button (click)='onComplete()' class="btn btn-success float-right">Complete</button><i class="fas fa-align-center"></i></div>
   </div>
 </div>
+

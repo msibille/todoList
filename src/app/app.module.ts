@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { TaskActiveComponent } from './task-active/task-active.component';
 import { TaskActiveListComponent } from './task-active-list/task-active-list.component';
 import { TaskNewComponent } from './task-new/task-new.component';
-import { AlertModule } from 'ngx-bootstrap';
 import { TaskEditComponent } from './task-edit/task-edit.component';
 
 @NgModule({
@@ -17,8 +16,7 @@ import { TaskEditComponent } from './task-edit/task-edit.component';
     TaskEditComponent
   ],
   imports: [
-    BrowserModule,
-    AlertModule.forRoot()
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

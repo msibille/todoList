@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TaskActiveComponent } from '../task-active/task-active.component';
 import { Task } from '../models/Task';
-import { TabHeadingDirective } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-task-active-list',
@@ -24,7 +23,7 @@ export class TaskActiveListComponent implements OnInit {
   }
 
   checkAlmostOneActive() {
-    for (let task of this.tasklist) {
+    for (const task of this.tasklist) {
       if (task.isActive) {
         console.log('Task ' + task.taskName + ' is active');
        return true;
