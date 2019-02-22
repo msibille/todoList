@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from '../models/Task';
 
 @Component({
@@ -9,6 +9,7 @@ import { Task } from '../models/Task';
 export class TaskActiveComponent implements OnInit {
 
   @Input() task: Task;
+  @Output() edit: EventEmitter<any> = new EventEmitter();
 
   constructor() {
    }
@@ -18,5 +19,9 @@ export class TaskActiveComponent implements OnInit {
 
   onComplete() {
     this.task.setNotActive();
+  }
+
+  onEdit() {
+    this.edit.emit(this.task);
   }
 }

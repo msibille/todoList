@@ -25,10 +25,14 @@ export class TaskActiveListComponent implements OnInit {
   checkAlmostOneActive() {
     for (const task of this.tasklist) {
       if (task.isActive) {
-        console.log('Task ' + task.taskName + ' is active');
+        // console.log('Task ' + task.taskName + ' is active');
        return true;
       }
     }
     return false;
+  }
+
+  edit(task: Task) {
+    console.log('EDIT event FIRED from task :' + task.taskName);
   }
 }

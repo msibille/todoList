@@ -1,6 +1,6 @@
 <div class='pt-5 text-center display-4 text-primary '>ACTIVE TASK LIST</div>
 <div *ngIf='checkAlmostOneActive(); else nothingTODO'>
-<app-task-active *ngFor="let task of tasklist" [task]="task"></app-task-active>
+<app-task-active *ngFor="let task of tasklist" [task]="task" (edit)="edit($event)"></app-task-active>
 </div>
 <ng-template #nothingTODO>
     <div class='pt-5 text-center display-4 text-danger'>Nothing to DO !</div>
